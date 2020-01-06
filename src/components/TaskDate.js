@@ -1,7 +1,7 @@
-import React from 'react';
-import moment from 'moment';
-import { FaSpaceShuttle, FaSun, FaRegPaperPlane } from 'react-icons/fa';
-import PropTypes from 'prop-types';
+import React from "react";
+import moment from "moment";
+import { FaSpaceShuttle, FaSun, FaRegPaperPlane } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
   showTaskDate && (
@@ -11,11 +11,11 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
           <div
             onClick={() => {
               setShowTaskDate(false);
-              setTaskDate(moment().format('DD/MM/YYYY'));
+              setTaskDate(moment().format("DD/MM/YYYY"));
             }}
             onKeyDown={() => {
               setShowTaskDate(false);
-              setTaskDate(moment().format('DD/MM/YYYY'));
+              setTaskDate(moment().format("DD/MM/YYYY"));
             }}
             data-testid="task-date-today"
             tabIndex={0}
@@ -34,16 +34,16 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
               setShowTaskDate(false);
               setTaskDate(
                 moment()
-                  .add(1, 'day')
-                  .format('DD/MM/YYYY')
+                  .add(1, "day")
+                  .format("DD/MM/YYYY")
               );
             }}
             onKeyDown={() => {
               setShowTaskDate(false);
               setTaskDate(
                 moment()
-                  .add(1, 'day')
-                  .format('DD/MM/YYYY')
+                  .add(1, "day")
+                  .format("DD/MM/YYYY")
               );
             }}
             data-testid="task-date-tomorrow"
@@ -63,16 +63,16 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
               setShowTaskDate(false);
               setTaskDate(
                 moment()
-                  .add(7, 'days')
-                  .format('DD/MM/YYYY')
+                  .add(7, "days")
+                  .format("DD/MM/YYYY")
               );
             }}
             onKeyDown={() => {
               setShowTaskDate(false);
               setTaskDate(
                 moment()
-                  .add(7, 'days')
-                  .format('DD/MM/YYYY')
+                  .add(7, "days")
+                  .format("DD/MM/YYYY")
               );
             }}
             data-testid="task-date-next-week"
@@ -90,8 +90,8 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
     </div>
   );
 
-  TaskDate.propTypes = {
-    setTaskDate: PropTypes.func.isRequired,
-    showTaskDate: PropTypes.bool.isRequired,
-    setShowTaskDate: PropTypes.func.isRequired,
-  };
+TaskDate.propTypes = {
+  setTaskDate: PropTypes.func.isRequired,
+  showTaskDate: PropTypes.bool.isRequired,
+  setShowTaskDate: PropTypes.func.isRequired
+};
